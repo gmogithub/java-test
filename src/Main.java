@@ -50,6 +50,11 @@ class TestImpl implements Test {
 
     private String name;
     private String code;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
 
     @Override
     public String getTest() {
