@@ -17,10 +17,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            <state relative-caret-position="369">
+              <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
                 <element signature="e#1905#1906#0" expanded="true" />
                 <element signature="e#1932#1933#0" expanded="true" />
                 <element signature="e#1972#1973#0" expanded="true" />
@@ -179,16 +181,15 @@
       <workItem from="1545031819232" duration="599000" />
       <workItem from="1545054024224" duration="1404000" />
       <workItem from="1545149831428" duration="88000" />
-      <workItem from="1546502168813" duration="157000" />
+      <workItem from="1546502168813" duration="901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14147000" />
+    <option name="totallyTimeSpent" value="14891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="25" width="1920" height="990" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21024546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -261,10 +262,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="369">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
             <element signature="e#1905#1906#0" expanded="true" />
             <element signature="e#1932#1933#0" expanded="true" />
             <element signature="e#1972#1973#0" expanded="true" />
