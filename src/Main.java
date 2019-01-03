@@ -49,6 +49,7 @@ class TestImpl implements Test {
 
 
     private String name;
+    private String code;
 
     @Override
     public String getTest() {
@@ -68,6 +69,13 @@ class TestImpl implements Test {
         this.name = name;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 }
 
 class Order {
