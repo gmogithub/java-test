@@ -51,6 +51,7 @@ class TestImpl implements Test {
     private String name;
     private String code;
     private String id;
+    private String test;
 
     public String getId() {
         return id;
