@@ -1,14 +1,7 @@
-import test.User;
-
-import javax.print.DocFlavor;
+import javax.script.ScriptException;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.*;
-import java.util.stream.Collectors;
 
 enum ROLE {
     USER,
@@ -17,14 +10,106 @@ enum ROLE {
 
 public class Main {
 
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
+    public static <T> List<T> concact(List<T>... lists) {
+//        return Arrays.stream(lists).reduce(new ArrayList<>(), (acc, list) -> {
+//            acc.addAll(list);
+//            return acc;
+//        });
+
+        return Arrays.stream(lists).reduce((acc, list) -> {
+            acc.addAll(list);
+            return acc;
+        }).orElse(new ArrayList<>());
+    }
+
+    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException, NoSuchFieldException, ScriptException {
+
+        Optional.empty();
+
+//        List<Integer> list = new ArrayList<>();
+
+        String code = "0123456";
+        String codeApe = code.substring(0, 5);
+        System.out.println(codeApe);
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(3);
+        list2.add(4);
+
+        ArrayList<Integer> list3 = new ArrayList<>();
+        list3.add(5);
+        list3.add(6);
+
+        concact(list, list2, list3).forEach(System.out::println);
+
+
 //        System.out.println(ROLE.USER.ordinal());
 //        System.out.println(ROLE.CUSTOMER.ordinal());
 //        Optional<User> userOptional = Optional.of(new User());
 //        userOptional.get();
-        String codeError = "#000000001";
-        codeError = codeError.replace("#", "");
-        System.out.println(Integer.parseInt(codeError, 10) + "======");
+//        String path = "/api/v25/localhost/users/4/";
+//        Pattern pattern = Pattern.compile("/api/v[0-9]+/([^/]+)");
+//        Matcher matcher = pattern.matcher(path);
+//        if(matcher.find()) {
+//            System.out.println(matcher.group(1));
+//        }
+
+//        String[] PATHS_BLOCKER_IGNORE = {"GET:/users/token/refresh", "PUT:/users/[0-9]+/accounting_statement", "POST:/users/[0-9]+/confirm"};
+//        String method = "GET";
+//        long count = 0;
+//        String uri = "/users/1/accounting_statement";
+//        count = Arrays.stream(PATHS_BLOCKER_IGNORE).filter(regex -> {
+//            String[] paths = regex.split(":");
+//            String methodReg = paths[0];
+//            String pathReg = paths[1];
+//            Pattern pattern1 = Pattern.compile(pathReg);
+//            Matcher matcher1 = pattern1.matcher(uri);
+//            return methodReg.equals(method) &&  matcher1.find();
+//        }).count();
+//
+//
+//        System.out.println("count => " + count);
+
+//        String path = "/api/v25/localhost/users/4?fetch_cabinet=true";
+//        Pattern pattern = Pattern.compile("/api/v[0-9]+/.+/users/([0-9]+)");
+//        Matcher matcher = pattern.matcher(path);
+//
+////        System.out.println(matcher.group(1));
+////        System.out.println(matcher.find());
+//        if (matcher.find()) {
+//            System.out.println(matcher.group(1));
+//        }
+//        String[] PATHS_BLOCKER_IGNORE = {"/users/token/refresh", "/users/[0-9]+/accounting_statement"};
+////        Pattern pattern1 = Pattern.compile("");
+////
+//        String path2 = "/api/v1/localhost/users/1/accounting_statement";
+//        Long count = Arrays.stream(PATHS_BLOCKER_IGNORE).filter(regex -> {
+//            Pattern pattern1 = Pattern.compile(regex);
+//            Matcher matcher1 = pattern1.matcher(path2);
+//            return matcher1.find();
+//        }).count();
+//        System.out.println(count + " count ");
+//        IntStream.rangeClosed(2017, 2019).forEach(System.out::println);
+//                .filter(pattern.asPredicate())
+//                .collect(Collectors.toList());
+
+//        String[] paths = path.split("/", 3);
+//        System.out.println(path.substring(0, path.indexOf("/", 8)));
+//        String codeError = "#000000001";
+//        codeError = codeError.replace("#", "");
+//        System.out.println(Integer.parseInt(codeError, 10) + "======");
+//        class Test {
+//            public String name;
+//        }
+//        ScriptEngineManager manager = new ScriptEngineManager(ClassLoader.getPlatformClassLoader());
+//        ScriptEngine engine =manager.getEngineByExtension("js");
+//        Object o = engine.eval("let order = new Order();");
+//        System.out.println(o);
+//        System.out.println(Test.class.getDeclaredField("name").getType().equals(Object.class) + " ============================");
+//        System.out.println(Test.class.getSuperclass().equals(Object.class));
 //        ArrayList<String> strings = new ArrayList<>();
 //        strings.add("greg");
 //        System.out.println("greg");
@@ -34,6 +119,7 @@ public class Main {
 //        var str = "";
 //        HttpClient httpClient = HttpClient.newHttpClient();
 //        httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString()).thenAccept(resp -> System.out.println(resp.body()));
+
     }
 }
 
